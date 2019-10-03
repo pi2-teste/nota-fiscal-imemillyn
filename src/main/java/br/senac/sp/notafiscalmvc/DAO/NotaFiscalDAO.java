@@ -17,6 +17,7 @@ public class NotaFiscalDAO {
     
     public static boolean addNota(NotaFiscal nota) {
         
+        
         listaNotas.add(nota);
         System.out.println("Agora lista geral");
         for (int i = 0; i < listaNotas.size(); i++) {
@@ -25,8 +26,14 @@ public class NotaFiscalDAO {
             System.out.println(get.getValNota());
             
         }
-        
+       
         return true;
     }
-
+    
+      public static int conta(){
+          return listaNotas.size();
+      }
+      public static NotaFiscal linda (int i) {
+          return listaNotas.get(i);
+      }
 }

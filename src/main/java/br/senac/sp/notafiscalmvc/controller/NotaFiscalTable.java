@@ -31,7 +31,7 @@ public class NotaFiscalTable extends AbstractTableModel {
     }
 
     public int getRowCount() {
-        //implementar metodo
+        NotaFiscalDAO.conta();
         return 3;
     }
 
@@ -40,12 +40,23 @@ public class NotaFiscalTable extends AbstractTableModel {
     }
 
     public Object getValueAt(int row, int col) {
-        //implementar metodo
-        return "esse retorno nao faz sentido, corrija quando chegar a hora";
+        NotaFiscal nota;
+        nota = NotaFiscalDAO.linda(row);
+        if (col == 0)
+            return nota.getNumNota();
+        return nota.getValNota();
     }
 
     public Class getColumnClass(int c) {
         return getValueAt(0, c).getClass();
+    }
+
+    public void invalidate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void repaint() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
