@@ -160,7 +160,7 @@ public class NotaFiscalForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoNumNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNumNotaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_campoNumNotaActionPerformed
 
     private void campoValNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoValNotaActionPerformed
@@ -169,13 +169,18 @@ public class NotaFiscalForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.out.println("nro nota");
+        String nNota = campoNumNota.getText();
         System.out.println("Número da Nota: "+campoNumNota);
-        System.out.println("Valor da Nota: "+campoValNota);
+        String vValor = campoValNota.getText();
+        System.out.println("Valor da Nota:R$ "+campoValNota);
         
-        double valNota; int numNota;
+        double valNota; 
+        int numNota;
+        
         valNota = Double.parseDouble(campoValNota.getText());
         numNota = Integer.parseInt(campoNumNota.getText());
         controller.salvar(numNota, valNota);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     public void refreshTable(){
         tableNotas.invalidate();
