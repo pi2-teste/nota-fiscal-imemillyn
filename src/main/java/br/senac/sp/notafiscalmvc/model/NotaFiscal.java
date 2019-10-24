@@ -12,6 +12,7 @@ package br.senac.sp.notafiscalmvc.model;
 public class NotaFiscal {
     double valNota;
     int numNota;
+    String notaProduto;
     
     public NotaFiscal() {
         System.out.println("inicializando um objeto do tipo NotaFiscal");
@@ -36,6 +37,15 @@ public class NotaFiscal {
         System.out.println(numNota);
         this.numNota = numNota;
     }
+    public String getNotaProduto(){
+        return notaProduto;
+    }
+    public void setnotaProduto(String notaProduto){
+        System.out.print("O objeto nota recebeu um nome: ");
+        System.out.println(notaProduto);
+        this.notaProduto = notaProduto;
+    }
+    
     
     
 }

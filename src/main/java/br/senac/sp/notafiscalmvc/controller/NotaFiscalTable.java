@@ -24,7 +24,7 @@ import javax.swing.table.AbstractTableModel;
  * @author lucas
  */
 public class NotaFiscalTable extends AbstractTableModel {
-    private String[] columnNames = {"NumNota","ValNota"};
+    private String[] columnNames = {"NumNota","ValNota", "notaProduto"};
 
     public int getColumnCount() {
         return 2;
@@ -44,7 +44,7 @@ public class NotaFiscalTable extends AbstractTableModel {
         nota = NotaFiscalDAO.linda(row);
         if (col == 0)
             return nota.getNumNota();
-        return nota.getValNota();
+        return nota.getNotaProduto();
     }
 
     public Class getColumnClass(int c) {
